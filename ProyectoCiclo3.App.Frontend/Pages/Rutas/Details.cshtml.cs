@@ -9,17 +9,21 @@ using ProyectoCiclo3.App.Dominio;
  
 namespace ProyectoCiclo3.App.Frontend.Pages
 {
-    public class ListRutaModel : PageModel
+    public class DetailsRutaModel : PageModel
     {
-        private readonly RepositorioRutas repositorioRutas;
-        public IEnumerable<Rutas> Rutas { get; set; }
-        public ListRutaModel(RepositorioRutas repositorioRutas)
-        {
+       private readonly RepositorioRutas repositorioRutas;
+              public Rutas Ruta {get;set;}
+ 
+        public DetailsRutaModel(RepositorioRutas repositorioRutas)
+       {
             this.repositorioRutas=repositorioRutas;
-        }
-        public void OnGet()
+       }
+ 
+        public IActionResult OnGet(int rutaId)
         {
-            Rutas=repositorioRutas.GetAll();
+                Ruta=repositorioRutas.GetRutaWithId(rutaId);
+                return Page();
+ 
         }
     }
 }
