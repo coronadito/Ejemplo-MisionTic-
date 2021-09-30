@@ -90,3 +90,4 @@ C:\Users\lacor\ProyectoCiclo3.App\ProyectoCiclo3.App.Frontend\obj\HPD\Debug\netc
 C:\Users\lacor\ProyectoCiclo3.App\ProyectoCiclo3.App.Frontend\obj\HPD\Debug\netcoreapp3.1\Razor\Pages\Buses\Edit.cshtml.g.cs
 C:\Users\lacor\ProyectoCiclo3.App\ProyectoCiclo3.App.Frontend\obj\HPD\Debug\netcoreapp3.1\Razor\Pages\Estaciones\Edit.cshtml.g.cs
 C:\Users\lacor\ProyectoCiclo3.App\ProyectoCiclo3.App.Frontend\obj\HPD\Debug\netcoreapp3.1\Razor\Pages\Rutas\Details.cshtml.g.cs
+C:\Users\lacor\ProyectoCiclo3.App\ProyectoCiclo3.App.Frontend\obj\HPD\Debug\netcoreapp3.1\Razor\Pages\Rutas\Edit.cshtml.g.cs

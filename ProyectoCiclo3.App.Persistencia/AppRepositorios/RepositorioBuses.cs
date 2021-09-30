@@ -29,6 +29,14 @@ namespace ProyectoCiclo3.App.Persistencia.AppRepositorios
             return buses.SingleOrDefault(b => b.id == id);
         }
 
+        public Buses Create(Buses newBus)
+        {
+           newBus.id=buses.Max(r => r.id) +1; 
+           buses.Add(newBus);
+           return newBus;
+        }
+
+
         public Buses Update(Buses newBus){
             var bus= buses.SingleOrDefault(b => b.id == newBus.id);
             if(bus != null){
