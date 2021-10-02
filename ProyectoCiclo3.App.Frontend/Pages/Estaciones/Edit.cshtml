@@ -7,17 +7,17 @@
 <div class="text-center">
 <form action="">
   <label for="id" class="form-label">Id Estacion:</label>
-  <input type="number" class="form-control" id="id" name="id" placeholder="Id Estación" asp-for="@estacion.id">
+  <input type="number" class="form-control" id="id" name="id" placeholder="Id Estación" asp-for="@estacion.id" required>
   <label for="nombre" class="form-label">Nombre Estacion:</label>
-  <input type="text" class="form-control" id="nombre" name="nombre" placeholder="Nombre Estacion" asp-for="@estacion.nombre">
+  <input type="text" class="form-control" id="nombre" name="nombre" placeholder="Nombre Estacion" asp-for="@estacion.nombre" required>
   <label for="direccion" class="form-label">Direccion Estacion:</label>
-  <input type="text" class="form-control" id="direccion" name="direccion" placeholder="Direccion Estacion" asp-for="@estacion.direccion">
+  <input type="text" class="form-control" id="direccion" name="direccion" placeholder="Direccion Estacion" asp-for="@estacion.direccion" required>
   <label for="coord_x" class="form-label">CoordX Estacion:</label>
-  <input type="number" class="form-control" id="coord_x" name="coord_x" placeholder="CoordX Estacion" asp-for="@estacion.coord_x">
+  <input type="number" class="form-control" id="coord_x" name="coord_x" placeholder="CoordX Estacion" asp-for="@estacion.coord_x" required>
   <label for="coord_y" class="form-label">CoordY Estacion:</label>
-  <input type="number" class="form-control" id="coord_y" name="coord_y" placeholder="CoordY Estacion" asp-for="@estacion.coord_y">
+  <input type="number" class="form-control" id="coord_y" name="coord_y" placeholder="CoordY Estacion" asp-for="@estacion.coord_y" required>
   <label for="tipo" class="form-label">Tipo Estacion:</label>
-  <input type="text" class="form-control" id="tipo" name="tipo" placeholder="Tipo Estacion" asp-for="@estacion.Tipo">
+  <input type="text" class="form-control" id="tipo" name="tipo" placeholder="Tipo Estacion" asp-for="@estacion.Tipo" required>
   <hr>
   <button type="submit" class="btn btn-success">Enviar</button>
 </form>
