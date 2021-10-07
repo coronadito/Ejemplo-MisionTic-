@@ -9,18 +9,20 @@
   <input type="text" class="form-control" id="id" name="id" placeholder="Id Bus" required>*@
 
   <label for="marca" class="form-label">Marca Bus:</label>
-  <input type="text" class="form-control" placeholder="Marca" name="marca" required>
+  <input type="text" class="form-control" placeholder="Marca" required asp-for="Bus.marca">
   <span class="text-danger" asp-validation-for="Bus.marca"></span>
 
   <label for="modelo" class="form-label">Modelo Bus:</label>
-  <input type="text" class="form-control" id="modelo" name="modelo" placeholder="Modelo Bus" required>
+  <input type="text" class="form-control"  placeholder="Modelo Bus" required asp-for="Bus.modelo">
 
   <label for="kilometraje" class="form-label">Kilometraje Bus:</label>
-  <input type="number" class="form-control" id="kilometraje" name="kilometraje" placeholder="Kilometraje Bus" required>
+  <input type="number" class="form-control"  placeholder="Kilometraje Bus" required asp-for="Bus.kilometraje">
+
   <label for="noasientos" class="form-label">Numero asientos Bus:</label>
-  <input type="text" class="form-control" id="numero_asientos" name="numero_asientos" placeholder="Numero asientos Bus" required>
+  <input type="text" class="form-control"  placeholder="Numero asientos Bus" required asp-for="Bus.numero_asientos">
+
   <label for="placa" class="form-label">Placa Bus:</label>
-  <input type="text" class="form-control" id="placa" name="placa" placeholder="Placa Bus" required maxlength="6" minlength="6">
+  <input type="text" class="form-control"  placeholder="Placa Bus" required asp-for="Bus.placa" maxlength="6" minlength="6">
   <hr>
   <button type="submit" class="btn btn-success">Enviar</button>
 </form>
