@@ -11,19 +11,22 @@ namespace ProyectoCiclo3.App.Frontend.Pages
 {
     public class FormRutaModel : PageModel
     {
+        private readonly RepositorioEstaciones repositorioEstaciones;
+        public IEnumerable<Estaciones> Estaciones {get;set;}
 
         private readonly RepositorioRutas repositorioRutas;
         [BindProperty]
         public Rutas Ruta {get;set;}
  
-        public FormRutaModel(RepositorioRutas repositorioRutas)
+        public FormRutaModel(RepositorioRutas repositorioRutas, RepositorioEstaciones repositorioEstaciones)
        {
             this.repositorioRutas=repositorioRutas;
+            this.repositorioEstaciones=repositorioEstaciones;
        }
 
         public void OnGet()
         {
- 
+            Estaciones=repositorioEstaciones.GetAll();
         }
 
         public IActionResult OnPost()

@@ -5,9 +5,9 @@
 }
  
 <div class="text-center">
-<form action="">
-  <label for="id" class="form-label">Id Estacion:</label>
-  <input type="number" class="form-control" id="id" name="id" placeholder="Id Estación" asp-for="@estacion.id" required>
+<form action="post">
+  <label for="id" class="form-label d-none">Id Estacion:</label>
+  <input type="number" class="form-control d-none"  placeholder="Id Estación" asp-for="@estacion.id" required>
   <label for="nombre" class="form-label">Nombre Estacion:</label>
   <input type="text" class="form-control" id="nombre" name="nombre" placeholder="Nombre Estacion" asp-for="@estacion.nombre" required>
   <label for="direccion" class="form-label">Direccion Estacion:</label>
