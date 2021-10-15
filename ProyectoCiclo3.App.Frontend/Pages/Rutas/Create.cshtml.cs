@@ -6,9 +6,11 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using ProyectoCiclo3.App.Persistencia.AppRepositorios;
 using ProyectoCiclo3.App.Dominio;
+using Microsoft.AspNetCore.Authorization;
  
 namespace ProyectoCiclo3.App.Frontend.Pages
 {
+    [Authorize]
     public class FormRutaModel : PageModel
     {
         private readonly RepositorioEstaciones repositorioEstaciones;
@@ -29,15 +31,19 @@ namespace ProyectoCiclo3.App.Frontend.Pages
             Estaciones=repositorioEstaciones.GetAll();
         }
 
-        public IActionResult OnPost()
+        public IActionResult OnPost(int origen,int destino,int tiempo_estimado)
         {
             if(!ModelState.IsValid)
             {
                 return Page();
+            }else{
+                repositorioRutas.Create(origen, destino, tiempo_estimado);            
+                return RedirectToPage("./List");
+
             }
             
-            Ruta = repositorioRutas.Create(Ruta);
-            return RedirectToPage("./List");
+            //Ruta = repositorioRutas.Create(Ruta);
+            //return RedirectToPage("./List");
         }
     }
 }
